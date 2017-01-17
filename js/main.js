@@ -14,30 +14,24 @@ var isChrome = !!window.chrome && !!window.chrome.webstore;
     // Blink engine detection
 var isBlink = (isChrome || isOpera) && !!window.CSS;
 
-
-
-// test if iPod, iPad, iPhone (no css fixed position support)
-    //if true 
-        //do not activate sticky header
-        //hero background-attachment set to scroll
-var iPad = false;
-
-if (navigator.userAgent.match(/(iPod|iPad|iPhone)/) || isSafari === true) {
-    iPad = true;
-    $('.hero').css({"background-attachment":"initial"});
-}
-    //if false 
-else {
-    //activate sticky header plugin
-    $(".sticky-header").sticky();
-}
-
-
-
-
-
-//homepage image effect on hover fade in and fade out
 $(document).ready(function() {
+
+    // test if iPod, iPad, iPhone (no css fixed position support)
+        //if true
+            //hero background-attachment set to scroll
+    if (navigator.userAgent.match(/(iPod|iPad|iPhone)/) || isSafari === true) {
+        iPad = true;
+        $('.hero').css({"background-attachment":"initial"});
+    }
+
+    //activate sticky header
+    $(".sticky-header").sticky();
+
+
+
+
+
+    //homepage image effect on hover fade in and fade out
     $('.image-holder').hover(
         function(){
                 $(this).find('.caption').fadeIn(300);
@@ -45,10 +39,8 @@ $(document).ready(function() {
                 $(this).find('.caption').fadeOut(300);
         }
     );
-});
 
-//project image effect on hover fade in and fade out
-$(document).ready(function() {
+    //project image effect on hover fade in and fade out
     $('.project-image-holder').hover(
         function(){
                 $(this).find('.project-caption').fadeIn(300);
@@ -56,7 +48,6 @@ $(document).ready(function() {
                 $(this).find('.project-caption').fadeOut(300);
         }
     );
-});
 
 
 
@@ -93,8 +84,7 @@ $(document).ready(function(){
 
 
 
-// hero heart beating mobile
-$(document).ready(function() {
+    // hero heart beating mobile
     function pulseMobile() {
         $('.heart-mobile').animate({
             opacity: 0.2
@@ -107,10 +97,8 @@ $(document).ready(function() {
         }); 
     };
     pulseMobile();
-});             
                
-// hero heart beating desktop
-$(document).ready(function() {
+    // hero heart beating desktop
     function pulse() {
         $('.heart').animate({
             opacity: 0.2
@@ -123,18 +111,16 @@ $(document).ready(function() {
         }); 
     };
     pulse();
- });
 
 
 
 
 
 
-//scroll back-to-top button on click
-//after initial scroll
-var amountScrolled = 300;
-//show button
-$(document).ready(function() {
+    //scroll back-to-top button on click
+    //after initial scroll
+    var amountScrolled = 300;
+    //show button
     $(window).scroll(function() {
         if ( $(window).scrollTop() > amountScrolled ) {
                 $('a.back-to-top').fadeIn('slow');
@@ -162,11 +148,9 @@ $(document).ready(function() {
             rect.right <= (window.innerWidth || document.documentElement.clientWidth)
         );
     };
-});
 
 
 //call function to determine if div is visible
-$(document).ready(function() {
     $(window).on('scroll',function(){ 
 
         if( $('.progress-fill').inView() ) {
