@@ -25,7 +25,7 @@ $(document).ready(function() {
     }
 
     //activate sticky header
-    $(".sticky-header").sticky();
+    $(".sticky-header").sticky({topSpacing:0});
 
 
 
