@@ -20,7 +20,6 @@ $(document).ready(function() {
         //if true
             //hero background-attachment set to scroll
     if (navigator.userAgent.match(/(iPod|iPad|iPhone)/) || isSafari === true) {
-        iPad = true;
         $('.hero').css({"background-attachment":"initial"});
     }
 
