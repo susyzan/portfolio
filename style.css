@@ -195,7 +195,7 @@ body {
 
 
 @media screen and (max-width: 720px) {
-   .logo  {
+   .logo-container {
 	display: none;
 	}
     nav {
@@ -208,7 +208,7 @@ body {
     float: left;
     padding: 0;
     margin: 0;
-    text-align: center;
+    text-align: left;
   }
   .hero {
       display: none;
