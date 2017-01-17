@@ -209,7 +209,7 @@ body {
     padding: 0;
     margin: 0;
     text-align: center;
-  } 
+  }
   .hero {
       display: none;
   }
@@ -259,7 +259,7 @@ body {
     background: linear-gradient(0deg, rgba(152,150,164, 0.8), rgba(152,150,164, 0.8)),  url(img/coffee-background.jpg);
     background-size: cover;
     background-position: center;
-     background-attachment: fixed;
+    background-attachment: fixed;
         }
 .hero-mobile {
     padding: 0;
@@ -267,12 +267,12 @@ body {
     overflow: hidden;
     margin: 0 auto;
     background: linear-gradient(0deg, rgba(152,150,164, 0.8), rgba(152,150,164, 0.8)),  url(img/coffee-background.jpg);
-   background-size: cover;
+    background-size: cover;
     background-position: center;
-     background-attachment: fixed;
+    background-attachment: fixed;
         }
 .banner-inner i {
-    font-size: 1.2em;
+    font-size: 2.8em;
 }
 .banner-inner {
     margin: 0 auto;
@@ -286,9 +286,11 @@ body {
 }
 .heart {
   color: #f7786b;
+    padding-top: 9%;
 }
 .heart-mobile {
   color: #f7786b;
+  padding-top: 10%;
 }
 
 /*-- END HERO BANNER --*/
@@ -459,7 +461,8 @@ body {
 
 @media (max-width: 720px) {
     .banner-inner {
-       font-size: 3.5em; 
+       font-size: 3em;
+       line-height: 1.5;
     }
     .work-image {
     position: relative;
