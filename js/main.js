@@ -1,26 +1,26 @@
-//test browser
-// Opera 8.0+
-var isOpera = (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
-    // Firefox 1.0+
-var isFirefox = typeof InstallTrigger !== 'undefined';
-    // At least Safari 3+: "[object HTMLElementConstructor]"
-var isSafari = Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0;
-    // Internet Explorer 6-11
-var isIE = /*@cc_on!@*/false || !!document.documentMode;
-    // Edge 20+
-var isEdge = !isIE && !!window.StyleMedia;
-    // Chrome 1+
-var isChrome = !!window.chrome && !!window.chrome.webstore;
-    // Blink engine detection
-var isBlink = (isChrome || isOpera) && !!window.CSS;
-
 $(document).ready(function() {
+    // /test browser
+    // Opera 8.0+
+    var isOpera = (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
+        // Firefox 1.0+
+    var isFirefox = typeof InstallTrigger !== 'undefined';
+        // At least Safari 3+: "[object HTMLElementConstructor]"
+    var isSafari = Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0;
+        // Internet Explorer 6-11
+    var isIE = /*@cc_on!@*/false || !!document.documentMode;
+        // Edge 20+
+    var isEdge = !isIE && !!window.StyleMedia;
+        // Chrome 1+
+    var isChrome = !!window.chrome && !!window.chrome.webstore;
+        // Blink engine detection
+    var isBlink = (isChrome || isOpera) && !!window.CSS;
 
     // test if iPod, iPad, iPhone (no css fixed position support)
         //if true
             //hero background-attachment set to scroll
     if (navigator.userAgent.match(/(iPod|iPad|iPhone)/) || isSafari === true) {
         $('.hero').css({"background-attachment":"initial"});
+        $('.hero-mobile').css({"background-attachment":"initial"});
     }
 
     //activate sticky header
