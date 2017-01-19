@@ -786,7 +786,6 @@ body {
  @media all and (max-width:720px){  
      #footer-nav {
          width: 90%;
-         margin: 0 auto;
      }
      
     #footer-nav ul li{
