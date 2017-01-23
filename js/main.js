@@ -51,33 +51,24 @@ $(document).ready(function() {
 
 
 
+    //parallax effect on homepage
+    (function(){
 
-/* hero background animation !!!!TO BE FIXED!!! problem: position cover
+        var parallax = document.querySelectorAll(".hero"),
+            speed = -0.2;
 
-$hero = $('.hero');
-$hero.css({"background-size":"100%"});
+        window.onscroll = function(){
+            [].slice.call(parallax).forEach(function(el,i){
 
-$(document).ready(function(){
+                var windowYOffset = window.pageYOffset,
+                    elBackgrounPos = "50% " + (windowYOffset * speed) + "px";
 
-    function zoomIn(){
-        $hero.animate({
-              "background-size":"103%"
-        }, 6000,'swing');
+                el.style.backgroundPosition = elBackgrounPos;
 
-        $hero.promise().done(zoomOut);
-    }
+            });
+        };
 
-    function zoomOut(){
-        $hero.animate({
-            "background-size":"100%"
-        },6000,'swing');
-
-        $hero.promise().done(zoomIn);
-    }
-
-    zoomIn();
-
-}); */
+    })();
 
 
 

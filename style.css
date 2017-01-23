@@ -260,6 +260,8 @@ body {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+    background-repeat: no-repeat;
+    height: 100%;
         }
 .hero-mobile {
     padding: 0;
@@ -270,6 +272,8 @@ body {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
+    background-repeat: no-repeat;
+    height: 100%;
         }
 .banner-inner i {
     font-size: 2.8em;
