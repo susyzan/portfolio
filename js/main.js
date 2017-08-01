@@ -140,18 +140,21 @@ $(document).ready(function() {
     };
 
 
-//call function to determine if div is visible
-    $(window).on('scroll',function(){ 
-
-        if( $('.progress-fill').inView() ) {
-            //if visible color the graph
-            $('.progress-fill span').each(function(){
-                var percent = $(this).html();
-                $(this).parent().stop().animate(  //!!stop() is important for android mobile
-                {width: percent},'slow'  //use percentage in html to color span
-                );
-            });
+    //call function to determine if div is visible
+    $(window).on('scroll',function(){
+        //need this to get rid of ugly js console error when not on the homepage
+        if (document.getElementById('progress-fill-container')) {
+            if( $('.progress-fill').inView() ) {
+                //if visible color the graph
+                $('.progress-fill span').each(function(){
+                    var percent = $(this).html();
+                    $(this).parent().stop().animate(  //!!stop() is important for android mobile
+                        {width: percent},'slow'  //use percentage in html to color span
+                    );
+                });
+            }
         }
+
     });
 });
 

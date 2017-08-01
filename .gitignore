@@ -46,3 +46,11 @@ Network Trash Folder
 Temporary Items
 .apdisk
 /nbproject/private/
+
+#php storm stuff
+.idea/*
+
+.htaccess
+
+#netbeans project stuff
+nbproject/*
