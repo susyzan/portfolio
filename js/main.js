@@ -104,11 +104,10 @@ $(document).ready(function() {
 
 
     // Add smooth scrolling to all links
-    $("a").on('click', function(event) {
+    $("a.scroll").on('click', function(event) {
 
         // Make sure this.hash has a value before overriding default behavior
-        console.log(this.hash);
-        if (this.hash !== "" && this.hash.length === 1) {
+        if (this.hash !== "") {
             // Prevent default anchor click behavior
             event.preventDefault();
 
