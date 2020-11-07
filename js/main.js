@@ -107,7 +107,8 @@ $(document).ready(function() {
     $("a").on('click', function(event) {
 
         // Make sure this.hash has a value before overriding default behavior
-        if (this.hash !== "") {
+        console.log(this.hash);
+        if (this.hash !== "" && this.hash.length === 1) {
             // Prevent default anchor click behavior
             event.preventDefault();
 
